@@ -1,0 +1,19 @@
+class base {
+  $basedir = "$<path>"
+  $user = "$< user >"
+  $mod_ver = "$< version >"
+  $pkg_dir = "$<pkg_dir>"
+  $mod_name = "$< name >"
+  $tag = "$< tag >"
+  $run_env = {"JAVA_HOME" => "/usr/java/jdk1.8.0_144"}
+  $run_dir = "${basedir}"
+  $to_email = ""
+  $service_name = "$<service_name>"
+  $mod_start = "sh /home/work/bin/${service_name}/bin/${service_name}.sh -r"
+  $log_dir = "/home/work/log/${service_name}"
+  $mod_run_log = "/home/work/log/${service_name}/${service_name}.log"
+  #$mod_stop = ""
+}
+
+class x1 inherits base {
+}

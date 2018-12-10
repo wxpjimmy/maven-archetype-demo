@@ -1,0 +1,2 @@
+01 01 * * * root /usr/bin/find <%= scope["config::log_dir"] %> -type f -mtime +30  -name "*.gz" -delete
+30 01 * * * root /usr/bin/find <%= scope["config::log_dir"] %> -type f -mtime +7   ! -name "*.gz" -exec gzip -f {} \;
